@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#app {
+    height: 90vh;
+    width: 100%;
+    display: grid;
+    gap: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(53, 116, 155);
+}
+
+#cenario {
+    overflow:hidden;
+    position: relative;
+    background-color: rgb(156, 222, 255);
+    height: 500px;
+    width: 900px;
+    border-bottom: 20px solid rgb(2, 155, 2);
+}
+
+h1 {
+    position: absolute;
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 600;
+    right: 50px;
+    top: 10px
+}
+
+h2 {
+    padding-left: 27%;
+    font-size: 3rem;
+    color: white;
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 800;
+}
+
+#player {
+    position: absolute;
+    height: 85px;
+    width: 85px;
+    top: 395px;
+    left: 100px;
+}
+
+.pulo {
+    animation: pulando 1s;
+}
+
+#cano {
+    position: absolute;
+    height: 70px;
+    width: 50px;
+    bottom: -4px;
+    left: 950px;
+}
+
+.anda {
+    animation: obstaculoMovimento 2s infinite linear;
+}
+
+@keyframes obstaculoMovimento {
+    0% {
+        left: 950px;
+    }
+
+    100% {
+        left: -50px;
+    }
+}
+
+@keyframes pulando {
+    0% {
+        top: 395px;
+    }
+
+    40% {
+        top: 210px;
+    }
+
+    100% {
+        top: 395px;
+    }
+}
